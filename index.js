@@ -33,7 +33,7 @@ console.log("Logado!");
 
 client.on('message', message => {
   if (message.content == '<@539980207533064219>') {
-    message.channel.send(`Minha prefix é \`${config.prefix}\`, use **/ajuda**.`)
+    message.channel.send(`Meu prefixo é \`${config.prefix}\`, use **.ajuda**.`)
   }
 });
 
@@ -45,7 +45,7 @@ client.on('guildMemberAdd', member => {
     .setDescription(`${member}! Você acabou de entrar no servidor!`)
     .setFooter(`ID do membro: ${member.id}`, member.user.avatarURL);
 
-  let canalEntrada = client.channels.get("584806117604065290")
+  let canalEntrada = client.channels.get("595303772956131331")
     .send(embed);
   
 });
@@ -58,7 +58,7 @@ client.on('guildMemberRemove', member => {
     .setDescription(`${member}! Acabou de sair do servidor!`)
     .setFooter(`ID do membro: ${member.id}`, member.user.avatarURL);
 
-  let canalEntrada = client.channels.get("584806117604065290")
+  let canalEntrada = client.channels.get("595303772956131331")
     .send(embed);
 
 });
