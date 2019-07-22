@@ -6,8 +6,8 @@ const fs = require('fs');
 
 
 client.on("ready", () => {
-  client.user.setPresence({ game: { name: `CLÃ FENIX`, url: "https://www.twitch.tv/CLÃFENIX", type: 1 } });
-  console.log("Online!")
+  client.user.setPresence({ game: { name: `CLÃ FENIX`, url: "https://www.twitch.tv/FÊNIX", type: 1 } });
+  console.log("bot online!")
 });
 
 client.on("message", message => {
@@ -18,6 +18,7 @@ client.on("message", message => {
   command = command.slice(config.prefix.length);
 
   let args = message.content.split(" ").slice(1);
+  // The list of if/else is replaced with those simple 2 lines:
 
   try {
     let commandFile = require(`./commands/${command}.js`);
@@ -32,8 +33,8 @@ client.login(config.token);
 console.log("Logado!");
 
 client.on('message', message => {
-  if (message.content == '<@539980207533064219>') {
-    message.channel.send(`Meu prefixo é \`${config.prefix}\`, use **.ajuda**.`)
+  if (message.content == '<@567831261901488128>') {
+    message.channel.send(`Minha prefix é \`${config.prefix}\`, use **.ajuda**.`)
   }
 });
 
@@ -58,7 +59,7 @@ client.on('guildMemberRemove', member => {
     .setDescription(`${member}! Acabou de sair do servidor!`)
     .setFooter(`ID do membro: ${member.id}`, member.user.avatarURL);
 
-  let canalEntrada = client.channels.get("595303772956131331")
+  let canalEntrada = client.channels.get("5595303772956131331")
     .send(embed);
 
 });
